@@ -1,5 +1,7 @@
 # 校园食堂智能体 canteen-agent
 
+[![CI](https://github.com/GitHubZGJ/canteen-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/GitHubZGJ/canteen-agent/actions/workflows/ci.yml)
+
 面向校园食堂经营的就餐数据分析与菜品优化智能体。覆盖「数据 → 分析 → 建议 → 采纳 → 追踪 → 复盘」决策闭环：智能体调用领域分析工具产出建议工单，经人工审批、执行登记、效果归因后归档。
 
 当前进度：v0.1.0 开源就绪（M1～M6 全部完成）。
