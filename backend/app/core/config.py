@@ -3,9 +3,9 @@ from pathlib import Path
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
-# backend/app/core/config.py -> 上溯 3 级到项目根
-PROJECT_ROOT = Path(__file__).resolve().parents[3]
-BACKEND_DIR = PROJECT_ROOT / "backend"
+# backend/app/core/config.py -> 上溯 2 级到后端目录（容器内为 /app，不受镜像布局影响）
+BACKEND_DIR = Path(__file__).resolve().parents[2]
+PROJECT_ROOT = BACKEND_DIR.parent
 
 
 class Settings(BaseSettings):
