@@ -8,4 +8,5 @@ bcrypt>=4.2
 pandas>=2.2
 numpy>=1.26
 statsmodels>=0.14
-httpx>=0.27python-multipart>=0.0.9
+httpx>=0.27
+python-multipart>=0.0.9
