@@ -1,0 +1,25 @@
+# 密钥与私密配置
+.env
+*.local
+新建 文本文档.txt
+
+# 虚拟环境与依赖缓存（全部在项目目录内）
+.venv/
+node_modules/
+.pip-cache/
+.npm-cache/
+
+# 运行时产物
+.run/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+dist/
+*.log
+.DS_Store
+
+# 本地数据库（模拟数据由生成器产出，不进仓库）
+data/*.db
+data/*.db-shm
+data/*.db-wal

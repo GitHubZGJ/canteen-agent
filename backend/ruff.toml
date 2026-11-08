@@ -1,0 +1,3 @@
+# FastAPI 惯例：Depends() 写在参数默认值是官方文档写法，豁免 B008
+[lint]
+ignore = ["B008"]

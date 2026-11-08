@@ -1,0 +1,29 @@
+services:
+  backend:
+    build: ./backend
+    container_name: canteen-agent-backend
+    environment:
+      DATABASE_URL: sqlite:////data/canteen.db
+      JWT_SECRET: ${JWT_SECRET:-please-change-me}
+      JWT_EXPIRE_HOURS: ${JWT_EXPIRE_HOURS:-24}
+      LLM_BASE_URL: ${LLM_BASE_URL:-}
+      LLM_API_KEY: ${LLM_API_KEY:-}
+      LLM_MODEL: ${LLM_MODEL:-}
+      AGENT_MAX_STEPS: ${AGENT_MAX_STEPS:-8}
+    volumes:
+      - canteen-data:/data
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    container_name: canteen-agent-frontend
+    depends_on:
+      - backend
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+
+volumes:
+  canteen-data:
